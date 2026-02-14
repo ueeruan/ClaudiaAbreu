@@ -7,10 +7,15 @@ const PerfumeChat = () => {
     const [input, setInput] = useState('');
     const [step, setStep] = useState(0); // 0: Name, 1: Type, 2: Occasion, 3: Final
     const [userData, setUserData] = useState({ name: '', type: '', occasion: '' });
-    const messagesEndRef = useRef(null);
+    const chatContainerRef = useRef(null);
 
     const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+        if (chatContainerRef.current) {
+            chatContainerRef.current.scrollTo({
+                top: chatContainerRef.current.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
     };
 
     useEffect(() => {
@@ -66,18 +71,18 @@ const PerfumeChat = () => {
 
                 <div className="bg-brand-dark border border-brand-gold/20 rounded-lg overflow-hidden shadow-[0_0_50px_rgba(201,168,76,0.1)] h-[500px] flex flex-col">
                     {/* Chat Area */}
-                    <div className="flex-grow p-6 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-brand-gold/30">
+                    <div ref={chatContainerRef} className="flex-grow p-6 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-brand-gold/30">
                         {messages.map((msg, index) => (
                             <div key={index} className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}>
                                 <div className={`max-w-[80%] p-4 rounded-lg text-sm leading-relaxed ${msg.type === 'user'
-                                        ? 'bg-brand-gold text-brand-black font-semibold rounded-br-none'
-                                        : 'bg-white/10 text-gray-200 rounded-bl-none border border-white/5'
+                                    ? 'bg-brand-gold text-brand-black font-semibold rounded-br-none'
+                                    : 'bg-white/10 text-gray-200 rounded-bl-none border border-white/5'
                                     }`}>
                                     {msg.text}
                                 </div>
                             </div>
                         ))}
-                        <div ref={messagesEndRef} />
+                        {/* <div ref={messagesEndRef} /> */}
                     </div>
 
                     {/* Input Area */}
