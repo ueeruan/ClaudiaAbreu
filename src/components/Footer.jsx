@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/logo.svg';
 
 const Footer = () => {
     return (
@@ -7,7 +8,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                     {/* Brand */}
                     <div className="md:col-span-1">
-                        <h2 className="text-2xl font-serif font-bold text-brand-gold mb-4">CLAUDIA ABREU</h2>
+                        <img src={logo} alt="Claudia Abreu" className="h-16 w-auto mb-4 object-contain" />
                         <p className="text-gray-500 text-sm leading-relaxed">
                             Curadoria de perfumes importados e exclusivos. A essência do luxo ao seu alcance.
                         </p>

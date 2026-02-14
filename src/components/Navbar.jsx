@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../assets/logo.svg';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -24,8 +25,10 @@ const Navbar = () => {
         <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-brand-black/90 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
                 {/* Logo */}
-                <a href="#" className="text-2xl font-serif font-bold text-brand-gold tracking-wider">
-                    CLAUDIA ABREU
+                <a href="#" className="flex items-center gap-2">
+                    <img src={logo} alt="Claudia Abreu - Logo" className="h-12 w-auto object-contain" />
+                    {/* Fallback text if needed, or remove */}
+                    {/* <span className="text-2xl font-serif font-bold text-brand-gold tracking-wider hidden md:block">CLAUDIA ABREU</span> */}
                 </a>
 
                 {/* Desktop Menu */}
