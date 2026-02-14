@@ -6,14 +6,17 @@ const About = () => {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col lg:flex-row items-center gap-16">
                     {/* Image Side */}
-                    <div className="w-full lg:w-1/2">
-                        <div className="relative">
-                            <div className="absolute inset-0 border-2 border-brand-gold transform translate-x-4 translate-y-4" />
-                            <img
-                                src="https://images.unsplash.com/photo-1596704017329-87c2b5cb388a?q=80&w=1000&auto=format&fit=crop"
-                                alt="Nossa História"
-                                className="w-full h-auto relative z-10 grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
-                            />
+                    <div className="w-full lg:w-1/2 flex justify-center items-center">
+                        <div className="relative p-12 border border-brand-gold/20 bg-brand-dark/50">
+                            <div className="absolute inset-0 border border-brand-gold/10 transform translate-x-3 translate-y-3" />
+                            <div className="text-center relative z-10">
+                                <h1 className="text-6xl md:text-8xl font-serif text-brand-white-soft tracking-widest font-bold mb-2">
+                                    CLAUDIA
+                                </h1>
+                                <p className="text-4xl md:text-6xl text-brand-gold font-serif italic -mt-4 md:-mt-8 ml-12 opacity-90" style={{ fontFamily: 'cursive' }}>
+                                    Abreu
+                                </p>
+                            </div>
                         </div>
                     </div>
 
