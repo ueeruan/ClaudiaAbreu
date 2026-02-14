@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Catalog from './components/Catalog';
+import PerfumeChat from './components/PerfumeChat';
 import About from './components/About';
-import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -35,9 +34,8 @@ function App() {
     <div className="bg-brand-black min-h-screen text-white selection:bg-brand-gold selection:text-brand-black">
       <Navbar />
       <Hero />
-      <div className="animate-on-scroll"><Catalog /></div>
+      <div className="animate-on-scroll"><PerfumeChat /></div>
       <div className="animate-on-scroll"><About /></div>
-      <div className="animate-on-scroll"><Testimonials /></div>
       <div className="animate-on-scroll"><Contact /></div>
       <Footer />
     </div>

@@ -1,4 +1,4 @@
-import logo from '../assets/logo.png';
+import React from 'react';
 
 const Footer = () => {
     return (
@@ -7,7 +7,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                     {/* Brand */}
                     <div className="md:col-span-1">
-                        <img src={logo} alt="Claudia Abreu" className="h-16 w-auto mb-4 object-contain" />
+                        <h2 className="text-2xl font-serif font-bold text-brand-gold mb-4">CLAUDIA ABREU</h2>
                         <p className="text-gray-500 text-sm leading-relaxed">
                             Curadoria de perfumes importados e exclusivos. A essência do luxo ao seu alcance.
                         </p>
@@ -18,9 +18,8 @@ const Footer = () => {
                         <h4 className="text-white font-serif mb-6">Navegação</h4>
                         <ul className="space-y-3 text-sm text-gray-400">
                             <li><a href="#home" className="hover:text-brand-gold transition-colors">Início</a></li>
-                            <li><a href="#collection" className="hover:text-brand-gold transition-colors">Nossa Coleção</a></li>
+                            <li><a href="#chat-consultant" className="hover:text-brand-gold transition-colors">Sua Essência</a></li>
                             <li><a href="#about" className="hover:text-brand-gold transition-colors">Sobre Nós</a></li>
-                            <li><a href="#testimonials" className="hover:text-brand-gold transition-colors">Depoimentos</a></li>
                         </ul>
                     </div>
 
@@ -37,13 +36,13 @@ const Footer = () => {
                     <div>
                         <h4 className="text-white font-serif mb-6">Redes Sociais</h4>
                         <div className="flex space-x-4">
-                            <a href="#" className="w-10 h-10 rounded-full bg-brand-dark flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-brand-black transition-all">
+                            <a href="https://instagram.com/cla_importsabreu" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-brand-dark flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-brand-black transition-all">
                                 <i className="fab fa-instagram"></i>
                             </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-brand-dark flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-brand-black transition-all">
+                            {/* <a href="#" className="w-10 h-10 rounded-full bg-brand-dark flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-brand-black transition-all">
                                 <i className="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-brand-dark flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-brand-black transition-all">
+                            </a> */}
+                            <a href="https://wa.me/5511958395198" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-brand-dark flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-brand-black transition-all">
                                 <i className="fab fa-whatsapp"></i>
                             </a>
                         </div>
